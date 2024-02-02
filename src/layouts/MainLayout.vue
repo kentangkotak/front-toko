@@ -103,8 +103,8 @@ const form = ref({
 const storeAuth = useAuthStore()
 function onSubmit () {
   const formData = new FormData()
-  formData.append('username', form.value.username + '@app.com')
-  formData.append('password', form.value.password)
+  formData.append('email', form.value.username + '@app.com')
+  formData.append('password', form.value.pass)
   storeAuth.login(formData)
 }
 

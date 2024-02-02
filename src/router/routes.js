@@ -1,11 +1,13 @@
 const routes = [
   {
-    path: "/",
+    path: "/login",
+    meta: { requireAuth: false },
     component: () => import("layouts/MainLayout.vue"),
     children: [{ path: "", component: () => import("pages/IndexPage.vue") }],
   },
   {
-    path: "/index",
+    path: "/",
+    meta: { requireAuth: true },
     component: () => import("layouts/Tampilan/IndexLayout.vue"),
     children: [
       {

@@ -10,16 +10,6 @@ export const useAuthStore = defineStore('auth', {
     token: localStorage.getItem('token') ? storage.getLocalToken(): null,
     user: localStorage.getItem('user') ? storage.getUser(): null,
     currentUser: localStorage.getItem('user') ? storage.getUser(): null,
-    loading: false,
-    aplications: [],
-    menus: [],
-    role: '',
-    foto: '',
-    route: {},
-    ruang: {},
-    kode_ruang: null,
-    depo: {},
-    mode: 'qr',
   }),
   actions: {
     login (payload) {
